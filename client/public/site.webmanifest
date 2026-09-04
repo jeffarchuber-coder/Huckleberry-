@@ -1,0 +1,9 @@
+{
+  "name": "My Huckleberry Life",
+  "short_name": "My Huckleberry Life",
+  "description": "Plainspoken home-safety guidance for older adults and the families who help them.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5efe2",
+  "theme_color": "#a84121"
+}

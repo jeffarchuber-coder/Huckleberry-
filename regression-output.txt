@@ -1,0 +1,516 @@
+{
+  "passed": 102,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "desktop / document response",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "desktop / has one main",
+      "passed": true,
+      "detail": "1"
+    },
+    {
+      "name": "desktop / has h1",
+      "passed": true,
+      "detail": "['Your parent says they\u2019re fine. The floor says otherwise.']"
+    },
+    {
+      "name": "desktop / no horizontal overflow",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "name": "desktop / no broken images",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "desktop / no generation failure placeholder",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop /checklist document response",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "desktop /checklist has one main",
+      "passed": true,
+      "detail": "1"
+    },
+    {
+      "name": "desktop /checklist has h1",
+      "passed": true,
+      "detail": "['The Room-by-Room Home Safety Checklist']"
+    },
+    {
+      "name": "desktop /checklist no horizontal overflow",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "name": "desktop /checklist no broken images",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "desktop /checklist no generation failure placeholder",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop /privacy-policy document response",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "desktop /privacy-policy has one main",
+      "passed": true,
+      "detail": "1"
+    },
+    {
+      "name": "desktop /privacy-policy has h1",
+      "passed": true,
+      "detail": "['Privacy policy']"
+    },
+    {
+      "name": "desktop /privacy-policy no horizontal overflow",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "name": "desktop /privacy-policy no broken images",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "desktop /privacy-policy no generation failure placeholder",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop /contact document response",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "desktop /contact has one main",
+      "passed": true,
+      "detail": "1"
+    },
+    {
+      "name": "desktop /contact has h1",
+      "passed": true,
+      "detail": "['Tell us what you\u2019re trying to figure out.']"
+    },
+    {
+      "name": "desktop /contact no horizontal overflow",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "name": "desktop /contact no broken images",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "desktop /contact no generation failure placeholder",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop /affiliate-disclosure document response",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "desktop /affiliate-disclosure has one main",
+      "passed": true,
+      "detail": "1"
+    },
+    {
+      "name": "desktop /affiliate-disclosure has h1",
+      "passed": true,
+      "detail": "['Affiliate disclosure']"
+    },
+    {
+      "name": "desktop /affiliate-disclosure no horizontal overflow",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "name": "desktop /affiliate-disclosure no broken images",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "desktop /affiliate-disclosure no generation failure placeholder",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop /404 document response",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "desktop /404 has one main",
+      "passed": true,
+      "detail": "1"
+    },
+    {
+      "name": "desktop /404 has h1",
+      "passed": true,
+      "detail": "['That page is not in the house.']"
+    },
+    {
+      "name": "desktop /404 no horizontal overflow",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "name": "desktop /404 no broken images",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "desktop /404 no generation failure placeholder",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop no page errors",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "desktop no request failures",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "desktop no application console errors",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "mobile / document response",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "mobile / has one main",
+      "passed": true,
+      "detail": "1"
+    },
+    {
+      "name": "mobile / has h1",
+      "passed": true,
+      "detail": "['Your parent says they\u2019re fine. The floor says otherwise.']"
+    },
+    {
+      "name": "mobile / no horizontal overflow",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "name": "mobile / no broken images",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "mobile / no generation failure placeholder",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile /checklist document response",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "mobile /checklist has one main",
+      "passed": true,
+      "detail": "1"
+    },
+    {
+      "name": "mobile /checklist has h1",
+      "passed": true,
+      "detail": "['The Room-by-Room Home Safety Checklist']"
+    },
+    {
+      "name": "mobile /checklist no horizontal overflow",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "name": "mobile /checklist no broken images",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "mobile /checklist no generation failure placeholder",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile /privacy-policy document response",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "mobile /privacy-policy has one main",
+      "passed": true,
+      "detail": "1"
+    },
+    {
+      "name": "mobile /privacy-policy has h1",
+      "passed": true,
+      "detail": "['Privacy policy']"
+    },
+    {
+      "name": "mobile /privacy-policy no horizontal overflow",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "name": "mobile /privacy-policy no broken images",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "mobile /privacy-policy no generation failure placeholder",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile /contact document response",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "mobile /contact has one main",
+      "passed": true,
+      "detail": "1"
+    },
+    {
+      "name": "mobile /contact has h1",
+      "passed": true,
+      "detail": "['Tell us what you\u2019re trying to figure out.']"
+    },
+    {
+      "name": "mobile /contact no horizontal overflow",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "name": "mobile /contact no broken images",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "mobile /contact no generation failure placeholder",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile /affiliate-disclosure document response",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "mobile /affiliate-disclosure has one main",
+      "passed": true,
+      "detail": "1"
+    },
+    {
+      "name": "mobile /affiliate-disclosure has h1",
+      "passed": true,
+      "detail": "['Affiliate disclosure']"
+    },
+    {
+      "name": "mobile /affiliate-disclosure no horizontal overflow",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "name": "mobile /affiliate-disclosure no broken images",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "mobile /affiliate-disclosure no generation failure placeholder",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile /404 document response",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "mobile /404 has one main",
+      "passed": true,
+      "detail": "1"
+    },
+    {
+      "name": "mobile /404 has h1",
+      "passed": true,
+      "detail": "['That page is not in the house.']"
+    },
+    {
+      "name": "mobile /404 no horizontal overflow",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "name": "mobile /404 no broken images",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "mobile /404 no generation failure placeholder",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile no page errors",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "mobile no request failures",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "mobile no application console errors",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "skip link is first keyboard target",
+      "passed": true,
+      "detail": "Skip to main content"
+    },
+    {
+      "name": "skip link reaches main content",
+      "passed": true,
+      "detail": "#main-content"
+    },
+    {
+      "name": "footer contains no placeholder links",
+      "passed": true,
+      "detail": "['/privacy-policy', '/contact', '/affiliate-disclosure', '/checklist']"
+    },
+    {
+      "name": "invalid email exposes accessible error",
+      "passed": true,
+      "detail": "true"
+    },
+    {
+      "name": "email error is associated to field",
+      "passed": true,
+      "detail": "_r_0_-note _r_0_-error"
+    },
+    {
+      "name": "checklist progress persists",
+      "passed": true,
+      "detail": "first checkbox after reload"
+    },
+    {
+      "name": "canonical metadata present",
+      "passed": true,
+      "detail": "https://myhuckleberrylife.com/"
+    },
+    {
+      "name": "Open Graph image present",
+      "passed": true,
+      "detail": "https://myhuckleberrylife.com/manus-storage/mhl-hero-home-safety_d4bdf07b.jpg"
+    },
+    {
+      "name": "structured data is valid JSON",
+      "passed": true,
+      "detail": "\n      {\n        \"@context\": \"https://schema.org\",\n        \"@graph\": [\n          {\n            \"@type\": \"Organization\",\n"
+    },
+    {
+      "name": "/robots.txt available",
+      "passed": true,
+      "detail": "status=200"
+    },
+    {
+      "name": "/sitemap.xml available",
+      "passed": true,
+      "detail": "status=200"
+    },
+    {
+      "name": "/site.webmanifest available",
+      "passed": true,
+      "detail": "status=200"
+    },
+    {
+      "name": "tagged checklist PDF available",
+      "passed": true,
+      "detail": "status=200, type=application/pdf"
+    },
+    {
+      "name": "no-JavaScript signup fallback visible",
+      "passed": true,
+      "detail": "1"
+    },
+    {
+      "name": "no-JavaScript field uses MailerLite name",
+      "passed": true,
+      "detail": "fields[email]"
+    },
+    {
+      "name": "no-JavaScript direct PDF link visible",
+      "passed": true,
+      "detail": "direct PDF link"
+    },
+    {
+      "name": "Vercel config includes Content-Security-Policy",
+      "passed": true,
+      "detail": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data: https:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://assets.mailerlite.com https://vitals.vercel-insights.com; form-action 'self' https://assets.mailerlite.com; upgrade-insecure-requests"
+    },
+    {
+      "name": "Vercel config includes X-Content-Type-Options",
+      "passed": true,
+      "detail": "nosniff"
+    },
+    {
+      "name": "Vercel config includes Referrer-Policy",
+      "passed": true,
+      "detail": "strict-origin-when-cross-origin"
+    },
+    {
+      "name": "Vercel config includes Permissions-Policy",
+      "passed": true,
+      "detail": "camera=(), microphone=(), geolocation=(), payment=()"
+    },
+    {
+      "name": "Vercel config includes X-Frame-Options",
+      "passed": true,
+      "detail": "DENY"
+    },
+    {
+      "name": "www host redirects to apex",
+      "passed": true,
+      "detail": "[{'source': '/(.*)', 'has': [{'type': 'host', 'value': 'www.myhuckleberrylife.com'}], 'destination': 'https://myhuckleberrylife.com/$1', 'permanent': True}]"
+    },
+    {
+      "name": "all public SPA routes have deep-link rewrites",
+      "passed": true,
+      "detail": "['/404', '/affiliate-disclosure', '/checklist', '/contact', '/privacy-policy']"
+    },
+    {
+      "name": "static branded 404 exists",
+      "passed": true,
+      "detail": "client/public/404.html"
+    }
+  ]
+}

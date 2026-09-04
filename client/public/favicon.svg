@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="My Huckleberry Life">
+  <path d="M8 31 32 10l24 21v23H8Z" fill="#fffaf1" stroke="#a84121" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M25 54V37h14v17" fill="none" stroke="#a84121" stroke-width="6"/>
+  <circle cx="32" cy="43" r="7" fill="#2d2925"/>
+  <path d="M34 34c1-6 5-9 11-8-1 6-5 9-11 8Z" fill="#53715e"/>
+</svg>
