@@ -11,3 +11,7 @@ Final external acceptance checks returned HTTP 200 for the homepage, all review 
 ## Source-Control Status
 
 The authorized repository `jeffarchuber-coder/Huckleberry-` remains an empty repository. Its browser session has administrator access, but the local GitHub connector currently has no usable token. The current Vercel project remains directly deployed rather than automatically linked to a populated GitHub source branch. The live website is healthy; automatic GitHub-driven deployments require a separate authenticated GitHub client session and a source push into the repository.
+
+## September 5, 2026 — Official Logo Update
+
+The user-supplied official My Huckleberry Life fisherman-and-water wordmark replaced the prior generated house-and-huckleberry icon in the shared header, footer, and decorative field-guide treatment. Desktop homepage/review and mobile homepage/review captures confirmed that the full logo remains legible, retains its intended aspect ratio, and does not create horizontal overflow or interfere with navigation.

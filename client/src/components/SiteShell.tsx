@@ -16,10 +16,6 @@ export function SiteShell({ children }: { children: ReactNode }) {
         <div className="shell header-inner">
           <Link href="/" className="brand">
             <BrandMark className="brand-mark" />
-            <span className="brand-copy">
-              <span className="brand-name">My Huckleberry Life</span>
-              <span className="brand-tagline">Your old friend to the end.</span>
-            </span>
           </Link>
           <nav className="primary-nav" aria-label="Primary navigation">
             <Link href="/reviews">Reviews</Link>

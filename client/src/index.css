@@ -206,15 +206,17 @@
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
   color: #2d2925;
   text-decoration: none;
 }
 
 .brand-mark {
-  width: 52px;
-  height: 52px;
-  object-fit: contain;
+  width: 156px;
+  height: 96px;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.58);
+  transform-origin: center;
 }
 
 .brand-copy {
@@ -819,9 +821,12 @@
 }
 
 .footer-mark {
-  width: 46px;
-  height: 46px;
-  object-fit: contain;
+  width: 122px;
+  height: 78px;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.54);
+  transform-origin: center;
 }
 
 .footer-brand div {
@@ -921,8 +926,8 @@
   }
 
   .brand-mark {
-    width: 44px;
-    height: 44px;
+    width: 132px;
+    height: 82px;
   }
 
   .brand-tagline {
@@ -1460,7 +1465,7 @@
 .mobile-nav a:hover, .mobile-nav a:focus-visible { color: #fffaf1; background: #a84121; }
 
 .section-hero { position: relative; padding: clamp(4.5rem, 9vw, 8rem) 0; background: #f5efe2; }
-.section-hero::after { position: absolute; right: max(20px, calc((100vw - 1180px) / 2)); bottom: 1.3rem; width: min(18vw, 165px); aspect-ratio: 1; background: url("https://files.manuscdn.com/user_upload_by_module/session_file/310519663816397374/ZyfWFJIeoDYmFyeJ.webp") center / contain no-repeat; content: ""; opacity: 0.05; pointer-events: none; }
+.section-hero::after { position: absolute; right: max(20px, calc((100vw - 1180px) / 2)); bottom: 1.3rem; width: min(22vw, 220px); aspect-ratio: 3 / 2; background: url("https://files.manuscdn.com/user_upload_by_module/session_file/310519663816397374/XryRTEDucoaMiDEt.png") center / 165% auto no-repeat; content: ""; opacity: 0.05; pointer-events: none; }
 .review-hero h1, .about-hero h1 { max-width: 15ch; margin: 0; color: #2a2521; font-size: clamp(3rem, 6vw, 6rem); letter-spacing: -0.06em; line-height: 0.95; }
 .status-line { display: inline-flex; align-items: center; gap: 0.55rem; border-top: 1px solid #cfc3b4; padding-top: 1rem; color: #5d534a; font-size: 0.8rem; font-weight: 800; }
 .status-line svg { width: 1.2rem; color: #a84121; }
