@@ -22,10 +22,22 @@ export function SiteShell({ children }: { children: ReactNode }) {
             </span>
           </Link>
           <nav className="primary-nav" aria-label="Primary navigation">
-            <Link href="/#what-is-inside">What’s inside</Link>
-            <Link href="/checklist">Read online</Link>
+            <Link href="/reviews">Reviews</Link>
+            <Link href="/guides">Guides</Link>
+            <Link href="/checklist">Checklist</Link>
             <Link href="/contact">Contact</Link>
           </nav>
+          <details className="mobile-nav">
+            <summary>Browse</summary>
+            <nav aria-label="Mobile navigation">
+              <Link href="/reviews">Reviews</Link>
+              <Link href="/guides">Guides</Link>
+              <Link href="/checklist">Checklist</Link>
+              <Link href="/how-we-review">How we review</Link>
+              <Link href="/about">About</Link>
+              <Link href="/contact">Contact</Link>
+            </nav>
+          </details>
         </div>
       </header>
 
@@ -41,6 +53,10 @@ export function SiteShell({ children }: { children: ReactNode }) {
             </div>
           </div>
           <nav className="footer-links" aria-label="Footer navigation">
+            <Link href="/reviews">Reviews</Link>
+            <Link href="/guides">Guides</Link>
+            <Link href="/how-we-review">How we review</Link>
+            <Link href="/about">About</Link>
             <Link href="/privacy-policy">Privacy policy</Link>
             <Link href="/contact">Contact</Link>
             <Link href="/affiliate-disclosure">Affiliate disclosure</Link>

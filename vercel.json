@@ -13,6 +13,12 @@
     { "source": "/privacy-policy", "destination": "/index.html" },
     { "source": "/affiliate-disclosure", "destination": "/index.html" },
     { "source": "/contact", "destination": "/index.html" },
+    { "source": "/about", "destination": "/index.html" },
+    { "source": "/how-we-review", "destination": "/index.html" },
+    { "source": "/reviews", "destination": "/index.html" },
+    { "source": "/reviews/(.*)", "destination": "/index.html" },
+    { "source": "/guides", "destination": "/index.html" },
+    { "source": "/guides/(.*)", "destination": "/index.html" },
     { "source": "/404", "destination": "/index.html" }
   ],
   "headers": [

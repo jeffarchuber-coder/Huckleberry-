@@ -40,3 +40,5 @@ The production source is linked to the Vercel project `my-huckleberry-life`. Rep
 - The printed inspection-sheet motif—thin rules, numbered sections, terracotta check marks, and paper annotations—defines major pages before shadows or card treatments.
 - The house-and-huckleberry mark recurs as a quiet editorial stamp in key sections. Terracotta remains reserved for primary actions, checks, sources, and the mark.
 - Generated imagery that does not complete reliably is replaced with verified project photography or a deterministic checklist cover; no failure placeholder ships.
+- Every non-homepage article or utility page uses a printed-field-guide cue near the top: a source/check note, section number, rule-lined stamp, or house-and-huckleberry mark.
+- Dark panels remain flat warm charcoal with rule lines and terracotta evidence marks; glossy shadows and app-card treatments are excluded.

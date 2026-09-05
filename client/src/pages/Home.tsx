@@ -3,13 +3,14 @@
  * editorial photography, senior-friendly type, and no hype or fake urgency.
  */
 import { ArrowRight, Check, ExternalLink, ShieldCheck } from "lucide-react";
+import { PageMeta } from "@/components/PageMeta";
 import { SiteShell } from "@/components/SiteShell";
 import { SignupForm } from "@/components/SignupForm";
 
-const HERO_640 = "/manus-storage/mhl-hero-640_f9a89749.webp";
-const HERO_960 = "/manus-storage/mhl-hero-960_d8a2b3ac.webp";
-const HERO_1440 = "/manus-storage/mhl-hero-1440_bd0732f0.webp";
-const DETAIL_URL = "/manus-storage/mhl-hand-rail-fallback_a17be660.jpg";
+const HERO_640 = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663816397374/epozuWjcAYSjgkWq.webp";
+const HERO_960 = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663816397374/UDjBGNiKiQuKJPwO.webp";
+const HERO_1440 = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663816397374/XjEyXmzpuIBJhEcy.webp";
+const DETAIL_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663816397374/NTtzGvxxwEPrBqmb.jpg";
 
 const rooms = [
   ["Entryway", "Threshold height, loose mats, porch lighting, and where the spare key really is."],
@@ -22,6 +23,7 @@ const rooms = [
 export default function Home() {
   return (
     <SiteShell>
+      <PageMeta title="My Huckleberry Life | Home Safety, Plainly" description="Practical home-safety checklists, medical-alert research briefs, and clear buyer’s guides for older adults and their families." path="/" />
       <main id="main-content">
         <section className="hero" aria-labelledby="hero-title">
           <div className="shell hero-grid">

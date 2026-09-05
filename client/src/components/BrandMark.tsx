@@ -2,7 +2,7 @@
  * Fort Myers Field Guide: the bold house-and-huckleberry mark stays simple,
  * warm, and readable at small sizes; it never competes with the wordmark.
  */
-const MARK_URL = "/manus-storage/mhl-house-berry-mark-256_d2b553ac.webp";
+const MARK_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663816397374/ZyfWFJIeoDYmFyeJ.webp";
 
 export function BrandMark({ className = "" }: { className?: string }) {
   return (

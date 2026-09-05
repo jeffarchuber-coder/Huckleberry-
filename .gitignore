@@ -111,3 +111,11 @@ temp/
 # Manus version file (auto-generated, not part of source)
 client/public/__manus__/version.json
 .project-config.json
+
+# Local validation and direct-deployment artifacts
+regression-results.json
+fullsite-regression-output.json
+vercel-production-deploy*.json
+content-inventory.txt
+perplexity_review_inventory_request.json
+perplexity_review_inventory_response.json

@@ -31,12 +31,22 @@ export default function AffiliateDisclosure() {
           </section>
 
           <section>
+            <h2>Research links and commercial links</h2>
+            <p>
+              Our research briefs link to manufacturer product pages, support materials, terms,
+              and privacy policies so you can check the source yourself. Those reference links are
+              not presented as purchase links. If we add an affiliate purchase link in the future,
+              we will label the relationship near that link before you click it.
+            </p>
+          </section>
+
+          <section>
             <h2>What does not change</h2>
             <p>
-              A commission does not buy a favorable opinion, placement, or score. We look at the
-              product, contract terms, cancellation rules, total cost, service, and practical fit.
-              If we think a product is not worth the money, we say so. We may link to a lower-cost
-              or no-cost option even when it pays us nothing.
+              A commission does not buy a favorable opinion, placement, or score. Our
+              research-based material checks currently published product details, contract terms,
+              cancellation rules, service information, and practical fit. It is not hands-on
+              testing unless we say it is and show what we tested.
             </p>
           </section>
 

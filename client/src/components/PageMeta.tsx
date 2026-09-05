@@ -33,6 +33,25 @@ export function PageMeta({
     setMeta('meta[name="twitter:description"]', "content", description);
     setMeta('meta[name="robots"]', "content", noIndex ? "noindex,follow" : "index,follow,max-image-preview:large");
     document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.setAttribute("href", url);
+    const schemaId = "page-schema";
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: title,
+      description,
+      url,
+      isPartOf: {
+        "@type": "WebSite",
+        name: "My Huckleberry Life",
+        url: ORIGIN,
+      },
+    };
+    const existingSchema = document.getElementById(schemaId) as HTMLScriptElement | null;
+    const schemaElement = existingSchema || document.createElement("script");
+    schemaElement.id = schemaId;
+    schemaElement.type = "application/ld+json";
+    schemaElement.textContent = JSON.stringify(schema);
+    if (!existingSchema) document.head.appendChild(schemaElement);
   }, [description, noIndex, path, title]);
 
   return null;

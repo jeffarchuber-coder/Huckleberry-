@@ -9,7 +9,7 @@ import { track } from "@vercel/analytics";
 const ENDPOINT =
   "https://assets.mailerlite.com/jsonp/2503920/forms/193565643324262311/subscribe";
 export const CHECKLIST_PDF_URL =
-  "/manus-storage/mhl-accessible-checklist_4a6da7b8.pdf";
+  "https://files.manuscdn.com/user_upload_by_module/session_file/310519663816397374/CAiMgFCNGxjcyygO.pdf";
 
 function trackSignup(name: string, placement: string) {
   track(name, { placement });

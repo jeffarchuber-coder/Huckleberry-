@@ -90,7 +90,7 @@ export default function Checklist() {
               </p>
             </div>
             <img
-              src="/manus-storage/mhl-checklist-cover_23c9702a.jpg"
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663816397374/AZcISvnQTjvtYnJa.jpg"
               width="1536"
               height="1024"
               alt="Cover of the printable Room-by-Room Home Safety Checklist."

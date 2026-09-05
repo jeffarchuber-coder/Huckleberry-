@@ -6,7 +6,25 @@ BASE = "http://127.0.0.1:3000"
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / "regression-results.json"
 
-routes = ["/", "/checklist", "/privacy-policy", "/contact", "/affiliate-disclosure", "/404"]
+review_routes = [
+    "/reviews/medical-alerts/medical-guardian-mg-mini-lite",
+    "/reviews/medical-alerts/bay-alarm-medical-sos-home",
+    "/reviews/medical-alerts/mobilehelp-micro",
+    "/reviews/medical-alerts/aloe-care-health-essentials",
+    "/reviews/medical-alerts/lively-mobile2",
+    "/reviews/medical-alerts/kanega-watch",
+]
+guide_routes = [
+    "/guides/medical-alerts-home-or-away",
+    "/guides/bathroom-fall-prevention-basics",
+    "/guides/transfer-aid-shopping-checklist",
+    "/guides/home-safety-tech-without-the-hype",
+]
+routes = [
+    "/", "/reviews", "/reviews/medical-alerts", "/reviews/fall-prevention", *review_routes,
+    "/guides", *guide_routes, "/how-we-review", "/about", "/checklist", "/privacy-policy",
+    "/contact", "/affiliate-disclosure", "/404",
+]
 viewports = {
     "desktop": {"width": 1280, "height": 800},
     "mobile": {"width": 390, "height": 844},
@@ -46,9 +64,22 @@ with sync_playwright() as p:
             record(f"{label} {route} no broken images", len(broken) == 0, broken)
             body_text = page.locator("body").inner_text()
             record(f"{label} {route} no generation failure placeholder", "Image generation failed" not in body_text, "placeholder visible" if "Image generation failed" in body_text else "")
+            schema = page.locator('script#page-schema[type="application/ld+json"]')
+            record(f"{label} {route} route schema present", schema.count() == 1, schema.count())
+
+            if route in review_routes:
+                stamp = page.locator(".research-stamp")
+                stamp_text = stamp.inner_text() if stamp.count() == 1 else ""
+                record(f"{label} {route} identified as research-based", stamp.count() == 1 and "not independently lab-tested" in stamp_text.lower(), stamp_text)
+                official = page.locator('a[href^="https://"]').first
+                record(f"{label} {route} has outbound official source", official.count() == 1 and official.get_attribute("target") == "_blank", official.get_attribute("href") if official.count() else "missing")
+
+            if route in guide_routes:
+                record(f"{label} {route} has numbered guide steps", page.locator(".guide-section").count() >= 4, page.locator(".guide-section").count())
 
         record(f"{label} no page errors", len(page_errors) == 0, page_errors)
-        record(f"{label} no request failures", len(request_failures) == 0, request_failures)
+        application_request_failures = [url for url in request_failures if "va.vercel-scripts.com" not in url]
+        record(f"{label} no request failures", len(application_request_failures) == 0, application_request_failures)
         analytics_noise = [e for e in console_errors if "vercel" not in e.lower() and "analytics" not in e.lower()]
         record(f"{label} no application console errors", len(analytics_noise) == 0, analytics_noise)
         context.close()
@@ -65,6 +96,17 @@ with sync_playwright() as p:
 
     footer_hrefs = page.locator("footer a").evaluate_all("links => links.map(link => link.getAttribute('href'))")
     record("footer contains no placeholder links", all(href and href != "#" for href in footer_hrefs), footer_hrefs)
+    record("footer includes review and editorial paths", {"/reviews", "/guides", "/how-we-review", "/about"}.issubset(set(footer_hrefs)), footer_hrefs)
+
+    mobile = browser.new_context(viewport=viewports["mobile"])
+    mobile_page = mobile.new_page()
+    mobile_page.goto(BASE + "/reviews", wait_until="domcontentloaded")
+    mobile_page.wait_for_timeout(500)
+    mobile_nav = mobile_page.locator("details.mobile-nav")
+    record("mobile browse navigation is visible", mobile_nav.is_visible(), mobile_nav.count())
+    mobile_nav.locator("summary").click()
+    record("mobile browse navigation exposes review and guide links", mobile_nav.locator('a[href="/reviews"]').count() == 1 and mobile_nav.locator('a[href="/guides"]').count() == 1, mobile_nav.inner_text())
+    mobile.close()
 
     email = page.locator('input[type="email"]').first
     email.fill("invalid-email")
@@ -85,7 +127,7 @@ with sync_playwright() as p:
     canonical = page.locator('link[rel="canonical"]').get_attribute("href")
     record("canonical metadata present", canonical == "https://myhuckleberrylife.com/", canonical)
     record("Open Graph image present", bool(page.locator('meta[property="og:image"]').get_attribute("content")), page.locator('meta[property="og:image"]').get_attribute("content"))
-    schema_text = page.locator('script[type="application/ld+json"]').inner_text()
+    schema_text = page.locator('script#page-schema[type="application/ld+json"]').inner_text()
     try:
         json.loads(schema_text)
         schema_valid = True
@@ -99,7 +141,11 @@ with sync_playwright() as p:
         text = response.text()
         record(f"{path} available", response.status == 200 and expected in text, f"status={response.status}")
 
-    pdf = context.request.get(BASE + "/manus-storage/mhl-accessible-checklist_4a6da7b8.pdf")
+    sitemap = context.request.get(BASE + "/sitemap.xml").text()
+    expected_sitemap_urls = ["/reviews", "/reviews/medical-alerts", "/reviews/fall-prevention", "/guides", "/how-we-review", "/about", *review_routes, *guide_routes]
+    record("sitemap contains every expanded public page", all(url in sitemap for url in expected_sitemap_urls), [url for url in expected_sitemap_urls if url not in sitemap])
+
+    pdf = context.request.get("https://files.manuscdn.com/user_upload_by_module/session_file/310519663816397374/CAiMgFCNGxjcyygO.pdf")
     record("tagged checklist PDF available", pdf.status == 200 and pdf.body().startswith(b"%PDF"), f"status={pdf.status}, type={pdf.headers.get('content-type')}")
     context.close()
 
@@ -109,7 +155,7 @@ with sync_playwright() as p:
     fallback = page.locator("noscript form")
     record("no-JavaScript signup fallback visible", fallback.is_visible(), fallback.count())
     record("no-JavaScript field uses MailerLite name", fallback.locator('input[type="email"]').get_attribute("name") == "fields[email]", fallback.locator('input[type="email"]').get_attribute("name"))
-    record("no-JavaScript direct PDF link visible", page.locator('noscript a[href*="mhl-accessible-checklist"]').is_visible(), "direct PDF link")
+    record("no-JavaScript direct PDF link visible", page.locator('noscript a[href*="files.manuscdn.com"]').is_visible(), "direct PDF link")
     nojs.close()
     browser.close()
 
@@ -120,7 +166,7 @@ for name in ["Content-Security-Policy", "X-Content-Type-Options", "Referrer-Poli
 redirects = vercel.get("redirects", [])
 record("www host redirects to apex", any(item.get("destination", "").startswith("https://myhuckleberrylife.com") and item.get("permanent") for item in redirects), redirects)
 rewrites = {item.get("source") for item in vercel.get("rewrites", [])}
-record("all public SPA routes have deep-link rewrites", {"/checklist", "/privacy-policy", "/affiliate-disclosure", "/contact"}.issubset(rewrites), sorted(rewrites))
+record("all public SPA routes have deep-link rewrites", {"/checklist", "/privacy-policy", "/affiliate-disclosure", "/contact", "/about", "/how-we-review", "/reviews", "/reviews/(.*)", "/guides", "/guides/(.*)"}.issubset(rewrites), sorted(rewrites))
 record("static branded 404 exists", (ROOT / "client" / "public" / "404.html").exists(), "client/public/404.html")
 
 summary = {
