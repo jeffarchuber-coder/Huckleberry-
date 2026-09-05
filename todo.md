@@ -10,4 +10,4 @@
 - [x] Complete supporting pages: About and How We Review now join the repaired Contact, Privacy, Affiliate Disclosure, and checklist routes with consistent navigation and footer access.
 - [x] Add route-level SEO/social metadata, sitemap entries, WebPage schema, deep-link rewrites, responsive navigation, and code-split route bundles; the existing analytics and optimized assets remain in use.
 - [x] Perform full-site desktop/mobile deep-link, navigation, review-disclosure, outbound-source, form, accessibility-structure, image, metadata, sitemap, configuration, and responsive-overflow regression testing: 374/374 checks pass.
-- [ ] Commit the verified production source to `myhuckleberrylife/myhuckleberrylife`, verify automatic deployment to `my-huckleberry-life`, and confirm `myhuckleberrylife.com`.
+- [x] Commit the verified production source to the user-authorized `jeffarchuber-coder/Huckleberry-` repository, verify the automatic GitHub `main` deployment (`dpl_GfNt7p9ekGZFjzdegvVTbV4pwTsS`) to `my-huckleberry-life`, and confirm `myhuckleberrylife.com` plus `www` apex normalization.
