@@ -15,3 +15,5 @@ The authorized repository `jeffarchuber-coder/Huckleberry-` remains an empty rep
 ## September 5, 2026 — Official Logo Update
 
 The user-supplied official My Huckleberry Life fisherman-and-water wordmark replaced the prior generated house-and-huckleberry icon in the shared header, footer, and decorative field-guide treatment. Desktop homepage/review and mobile homepage/review captures confirmed that the full logo remains legible, retains its intended aspect ratio, and does not create horizontal overflow or interfere with navigation.
+
+The first Git-triggered logo deployment exposed a Vercel project-output mismatch that served the compiled server bundle rather than `dist/public`. The committed Vercel configuration now explicitly sets the Vite framework, frozen-lockfile install command, `pnpm build`, and `dist/public` output directory. The resulting Git deployment `dpl_BLG1zdMgJmJb4CNWVNeFnQfinw5a` is ready, and the custom-domain homepage now serves the rendered site with the official logo visible in the header and footer.

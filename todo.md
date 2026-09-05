@@ -14,3 +14,4 @@
 - [x] Prepare and upload the supplied official My Huckleberry Life logo for production use.
 - [x] Replace the shared header, footer, and decorative logo treatments with the official brand asset.
 - [x] Verify the updated logo across desktop and mobile routes: 374/374 regression checks passed; desktop and mobile captures confirmed a clear, proportionate layout without overflow.
+- [x] Repair the Git-triggered Vercel build output configuration and re-verify that the custom domain serves the built website rather than the bundled server source.
